@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background: #fedede;
+    --ground: #1a191983;
+    --header: #040404;
+    --color: #0e0d0d;
+    --verde: #0f0;
+    --fonteI: Arial, Helvetica, sans-serif;
+    --fonteII: "Source Code Pro", monospace;
+}
+
+body{
+    font-family: var(--fonteI);
+    background-color: var(--background);
+    color: var(--color);
+}
+
+header{
+    background-color: var(--header);
+    padding: 25px 50px;
+    font-family: var(--fonteII);
+    color: var(--background)
+}
+
+.title{
+    font-family: var(--fonteI);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.cab{
+    padding: 20px 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+}
+
+.top{
+    padding: 50px 50px;
+    display:flex;
+    font-family: var(--fonteII);
+    color: var(--color);
+}
+
+.accordion{
+    min-width: 120px;
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 35px 50px;
+}
+
+.accordion-button {
+    background-color: transparent;
+    color: var(--background);
+    padding: 20px 50px;
+    text-align: left;
+    outline: none;
+    font-family: var(--fonteII);
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-button:hover {
+    background-color: var(--ground);
+}
+
+.accordion-content {
+    font-family: var(--fonteII);
+    font-weight: 100;
+    font-size: 20px;
+    color: var(--background);
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--ground);
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}
+
+a{
+    color: var(--color);
+    text-decoration: none;
+}
+
+h2{
+    font-family: var(--fonteI);
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+.txt{
+    margin: 0 16px;
+    padding: 20px 50px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 25px;   
+ }
