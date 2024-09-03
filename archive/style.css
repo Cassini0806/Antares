@@ -23,17 +23,20 @@ body{
     filter: sepia(70%);
 }
 
+/*cabeçalho*/
+
 header{
-    padding: 25px 50px;
+    padding: 40px 50px;
     font-family: var(--fonteII);
-    color: var(--color)
+    color: var(--color);
+    background-color: var(--ground);
 }
 
 .title{
     font-family: var(--fonteII);
     font-style: italic;
     font-weight: 300;
-    font-size: 30px;
+    padding: 5px;
 }
 
 .cab{
@@ -52,11 +55,13 @@ header{
     color: var(--color);
 }
 
+/*acordeão*/
+
 .accordion{
     min-width: 120px;
-    max-width: 250px;
+    max-width: 180px;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     padding: 20px 50px;
 }
@@ -64,7 +69,7 @@ header{
 .accordion-button {
     background-color: transparent;
     color: var(--color);
-    padding: 15px 50px;
+    padding: 0px 10px;
     text-align: left;
     outline: none;
     font-family: var(--fonteI);
@@ -85,7 +90,7 @@ header{
     padding: 0 10px;
     max-height: 0;
     overflow: hidden;
-    background-color: var(--ground);
+    background-color: var(--backgrondII);
     transition: max-height 0.3s ease-out;
 }
 
@@ -98,39 +103,105 @@ a{
     text-decoration: none;
 }
 
+/*texto*/
+
 h2{
     font-family: var(--fonteI);
     font-weight: 300;
-    font-size: 40px;
+    font-size: 180%;
     text-align: center;
-    padding-top: 1.5%;
+    padding-top: 5%;
     padding-bottom: 1.5%;
 }
 
 .txt{
     margin: 0 16px;
-    padding: 20px 50px;
+    padding: 20px 5%;
     justify-content: center;
     text-align: center;
     display: flex;
-    font-size: 25px;   
- }
+    font-size: 150%; 
+    font-weight: 200;  
+}
 
- @media screen and (max-width: 480px){
-    .top{
-            margin: 0 16px;
-            padding: 20px 0;
-            justify-content:center;
-            display:flexbox;
-            text-align: center;
-            grid-template-columns: 20% 20% 20% 20% 20%;
+.txt.d{
+    margin: 0 16px;
+    padding: 20px 5%;
+    justify-content: left;
+    text-align: left;
+    display: flex;
+    font-size: 150%; 
+    font-weight: 200;
+    padding-bottom: 150px;
+}
+
+/*Historico*/
+
+.arquivo{
+    margin: 0 16px;
+    padding: 20px 0;
+    justify-content:left;
+}
+
+.bookshelf{
+    text-align: left;
+    padding: 50px 0px;
+    text-shadow: var(--sombra);
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.livro{
+    padding: 20px 20px;
+    size: 500px;
+    background-color: var(--ground);
+}
+
+h4{
+    font-family: var(--fonteI);
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 0.5%;
+}
+
+.data{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/*footer*/
+
+footer{
+    background-color: var(--backgrondII);
+}
+
+.rede{
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+}
+
+.icon{
+    padding: 0 16px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+@media screen{
+    .livro.pepo:first-child{
+        border-radius: 10px 10px 0 0;
     }
-    .accordion{
-        min-width: 120px;
-        max-width: 250px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 20px 50px;
+    .livro.pepo:last-child{
+        border-radius: 0 0 10px 10px;
     }
- }
+}
+
+@media screen and (max-width: 600px){
+    .txt{
+        font-size: 100%;   
+    }    
+}
