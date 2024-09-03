@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Antares</title>
+    <link rel="stylesheet" href="archive/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link rel="icon" type="image/png" href="imgs/log.png">
 </head>
 <body>
     <header>
         <div class="cab">
-            <h1 class="title">Antares</h1>
             <div class="accordion title">
-                <button class="accordion-button">☰ Menu</button>
+                <!--Essa com certeza não é a melhor maneira de fazer um menu recolhível, mas funciona.-->
+                <button class="accordion-button"><h1 class="title">Antares</h1></button>
                 <div class="accordion-content">
-                    <p>Home</p>
-                    <p>Histórico</p>
-                    <p>Rádio</p>
+                    <a href="../index.html"><p>Home</p></a>
+                    <a href="archive/hist.html"><p>Histórico</p></a>
+                    <a href="archive/radio.html"><p>Rádio</p></a>     
                 </div>
             </div>
         </div>
     </header>
     <section>
-        <h2>Titulo</h2>
-        <p class="txt"></p>
+        <p class="txt">Antes de a humanidade ter nascido, as estrelas brilhavam no cosmos; e muito depois da humanidade partir, as estrelas continuarão brilhando. Enquanto elas viverem, a humanidade continuará respeitando-as e valorizando o seu próprio destino. Por isso escrevo essas memórias, como registro de nossa existência e como lembrança de nosso destino.</p>
+        <h2>Última Postagem</h2>
+        <section class="arquivo">
+            <section class="estante">
+                <ul class="bookshelf">
+                    <section>
+                        <li class="livro pepo">
+                            <a href="archive/none/00-00-0000.html"><h1>Sobre o Tempo</h1></a>
+                            <p class="data">00/00/0000</p>
+                            <p class="data"> Maquinalmente, giram as engrenagens, movem-se os ponteiros, atualiza-se a hora, segundo após segundo, minuto após minuto, hora após hora. Assim Assim trabalha o relógio, orientado pelo quartzo, materializando em números o te...</p>
+                        </li>
+                    </section>
+                </ul>
+            </section>
+        </section>
     </section>
-    <script src="script.js"></script>
+    <script src="archive/script.js"></script>
+    <footer>
+        <h4>Contato</h4>
+        <div class="rede">
+            <a href="https://github.com/Cassini0806"><p class="icon">Github</p></a>
+        </div>
+    </footer>
 </body>
 </html>
+
+<!--☰-->
