@@ -22,7 +22,58 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="yes">
+        <canvas id="canvas" width="1000" height="800"></canvas>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            var sun = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 50,
+            color: "yellow"
+            };
+
+            var planet = {
+            x: sun.x + 200,
+            y: sun.y,
+            radius: 20,
+            color: "blue",
+            angle: 0,
+            speed: 0.01
+            };
+
+            function drawSun() {
+            ctx.beginPath();
+            ctx.arc(sun.x, sun.y, sun.radius, 0, Math.PI * 2);
+            ctx.fillStyle = sun.color;
+            ctx.fill();
+            ctx.closePath();
+            }
+
+            function drawPlanet() {
+            ctx.beginPath();
+            ctx.arc(planet.x, planet.y, planet.radius, 0, Math.PI * 2);
+            ctx.fillStyle = planet.color;
+            ctx.fill();
+            ctx.closePath();
+            }
+
+            function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawSun();
+            drawPlanet();
+
+            planet.x = sun.x + Math.cos(planet.angle) * 200;
+            planet.y = sun.y + Math.sin(planet.angle) * 200;
+            planet.angle += planet.speed;
+
+            requestAnimationFrame(update);
+            }
+
+            update();
+        </script>
     </section>
     <script src="script.js"></script>
     <footer>
