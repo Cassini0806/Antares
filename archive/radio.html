@@ -47,11 +47,13 @@
             function drawSun() {
             ctx.beginPath();
             ctx.arc(sun.x, sun.y, sun.radius, 0, Math.PI * 2);
+            ctx.shadowBlur = 10
             ctx.fillStyle = sun.color;
             ctx.fill();
             ctx.closePath();
+            ctx.shadowBlur = 0 
             }
-
+            
             function drawPlanet() {
             ctx.beginPath();
             ctx.arc(planet.x, planet.y, planet.radius, 0, Math.PI * 2);
